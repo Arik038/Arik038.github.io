@@ -1,0 +1,28 @@
+{
+  "name": "kc-dental-works",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "KC Dental Works — static site + Express backend",
+  "scripts": {
+    "dev": "concurrently -k -n FRONT,API -c blue,magenta \"live-server --port=5000 --mount=/:./\" \"nodemon server/app.js\"",
+    "start": "node server/app.js",
+    "lint": "echo \"Linting placeholder (add ESLint/Stylelint configs)\"",
+    "format": "prettier -w .",
+    "generate:sitemap": "node scripts.generate-sitemap.js",
+    "test": "jest --env=node --passWithNoTests",
+    "build": "echo \"No bundler needed. Ensure static assets are optimized.\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "jest": "^29.7.0",
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3"
+  }
+}

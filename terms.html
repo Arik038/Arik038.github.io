@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Service — KC Dental Works</title>
+  <meta name="description" content="Terms of Service at KC Dental Works, Prishtina." />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"></noscript>
+  <link href="/src/css/tokens.css" rel="stylesheet" />
+  <link href="/src/css/base.css" rel="stylesheet" />
+  <link href="/src/css/layout.css" rel="stylesheet" />
+  <link href="/src/css/components.css" rel="stylesheet" />
+  <link href="/src/css/pages.css" rel="stylesheet" />
+  <meta property="og:title" content="Terms of Service — KC Dental Works"/>
+  <meta property="og:description" content="Terms of Service at KC Dental Works, Prishtina."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="/public/images/og-default.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <div class="menu-group">
+        <button class="hamburger btn btn-secondary" aria-controls="site-menu" aria-expanded="false">Menu</button>
+        <a href="/index.html" class="logo">KC Dental Works</a>
+      </div>
+      <nav aria-label="Primary" id="site-menu" class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/dentures.html">Dentures</a>
+        <a href="/braces.html">Braces</a>
+        <a href="/general.html">General</a>
+        <a href="/gallery.html">Gallery</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a class="btn btn-primary" href="/contact.html#appointment">Book Appointment</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+<section class="section">
+  <div class="container">
+    <h1>Terms of Service</h1>
+    <p>By using this site you agree to our terms. Services subject to clinical assessment.</p>
+  </div>
+</section>
+</main>
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <section>
+          <h3>KC Dental Works</h3>
+          <p>Precision dentures & braces in Prishtina.</p>
+          <p class="kc-hours">
+            <div><strong>Mon–Fri</strong></div><div>09:00–18:00</div>
+            <div><strong>Sat</strong></div><div>09:00–14:00</div>
+          </p>
+          <p class="mini">© 2025 KC Dental Works</p>
+        </section>
+        <section>
+          <h4>Contact</h4>
+          <p><svg class="icon"><use href="/public/icons/sprite.svg#map-pin"></use></svg> Rruga B, Prishtina, Kosovo</p>
+          <p><svg class="icon"><use href="/public/icons/sprite.svg#phone"></use></svg> +383 44 123 456</p>
+          <p><svg class="icon"><use href="/public/icons/sprite.svg#mail"></use></svg> info@kcdentalworks.com</p>
+        </section>
+        <section>
+          <h4>Quick links</h4>
+          <p><a href="/accessibility.html">Accessibility</a></p>
+          <p><a href="/privacy.html">Privacy</a></p>
+          <p><a href="/terms.html">Terms</a></p>
+        </section>
+        <section>
+          <h4>Follow</h4>
+          <p class="inline">
+            <a href="#"><svg class="icon"><use href="/public/icons/sprite.svg#facebook"></use></svg></a>
+            <a href="#"><svg class="icon"><use href="/public/icons/sprite.svg#instagram"></use></svg></a>
+          </p>
+          <p><span class="badge"><svg class="icon"><use href="/public/icons/sprite.svg#star"></use></svg> 5★ rated</span></p>
+        </section>
+      </div>
+    </div>
+  </footer>
+  <div id="modal" class="modal-backdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+      <h3 id="modal-title">Thanks!</h3>
+      <p>We'll be in touch shortly.</p>
+      <button class="btn btn-primary" onclick="this.closest('#modal').hidden=true">Close</button>
+    </div>
+  </div>
+  <script type="module">
+    import { on, qs, setCurrentNav } from '/src/js/dom.js';
+    import { initForms } from '/src/js/forms.js';
+    import { initSliders } from '/src/js/slider.js';
+    import { initModal } from '/src/js/modal.js';
+    setCurrentNav(); initForms(); initSliders(); initModal();
+    const menu=document.getElementById('site-menu'); const burger=qs('.hamburger');
+    if(burger) on(burger,'click',()=>{ const open=menu.classList.toggle('open'); burger.setAttribute('aria-expanded', open?'true':'false'); });
+  </script>
+</body>
+</html>
